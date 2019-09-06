@@ -1,0 +1,4 @@
+D=load('neuse.txt');
+t=D(:,1);
+d=D(:,2);
+for i = 
