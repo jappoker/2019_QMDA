@@ -1,9 +1,12 @@
-import numpy as np 
+import numpy as np
+import matplotlib.pyplot as plt
 
-# a = [1,2,3,4,5,6]
-# b = a
-# b[0] = 999
-# print("a = ",a, ", b = ",b)
+C = (0,0)
+B = (6,0)
+D = (np.cos(25/180*np.pi) * 10 , np.sin(25/180*np.pi) * 10 )
 
 
-a = np.linspace(0,100,101)
+plt.scatter(*C)
+plt.scatter(*B)
+plt.scatter(*D)
+plt.show()
