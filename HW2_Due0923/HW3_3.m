@@ -43,13 +43,13 @@ p = @(m) 2*2.*m/(sqrt(2*pi)) .* exp(- m.^4 /2) ;
     
 % mean = E(x) = \int x * p(x) dx
 
-p_m = @(m) 2*2.*m.^2/(sqrt(2*pi)) .* exp(- m.^4 /2);
+p_m = @(m) p(m).*m;
 meanval = integral( p_m,0,Inf);
 
 % variance = E(x^2) - E(x)^2
 %          = \int x^2 * p(x) dx - mean ^2
 
-p_m2 =@(m) 2*2.*m.^3/(sqrt(2*pi)) .* exp(- m.^4 /2);
+p_m2 =@(m) p(m).*m.^2;
 variance = integral(p_m2,0,Inf) - meanval^2;
 
 % median M: \int_0^M p(x) dx - 1/2 * \int_0^Inf p(x) dx = 0

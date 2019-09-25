@@ -1,12 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-C = (0,0)
-B = (6,0)
-D = (np.cos(25/180*np.pi) * 10 , np.sin(25/180*np.pi) * 10 )
 
-
-plt.scatter(*C)
-plt.scatter(*B)
-plt.scatter(*D)
-plt.show()
+a = np.arctan (2/np.tan(107.0578/180*np.pi))
+print(a/np.pi*180)

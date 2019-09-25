@@ -60,13 +60,13 @@ for l=[5 10]
     
     % mean = E(x) = \int x * p(x) dx
     
-    p_d = @(d) l*exp(-l*d) .* d;
+    p_d = @(d) p(d).*d;
     meanval = integral( p_d,0,Inf);
     
     % variance = E(x^2) - E(x)^2
     %          = \int x^2 * p(x) dx - mean ^2
     
-    p_d2 = @(d) l*exp(-l*d) .* d .*d;
+    p_d2 = @(d) p(d).*d.^2;
     variance = integral(p_d2,0,Inf) - meanval^2;
     
     % median M: \int_0^M p(x) dx - 1/2 = 0
