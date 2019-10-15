@@ -7,7 +7,8 @@ sig_d = 1;
 I = eye(n,n);
 
 covar_d = sig_d ^ 2 * I;
-M =  (G' * G) \ G';
+% M =  (G' * G) \ G';
+M = inv(G' * G) * G';
 covar_m = M * covar_d * M';
 
 sig_m = sqrt(diag(covar_m));
