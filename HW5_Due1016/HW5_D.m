@@ -16,7 +16,7 @@ close all;
 % sig_m = 0.4;
 
 sig_e = 0.1;
-sig_m = 5;
+sig_m = 1.4;
 
 
 % Calculation 
