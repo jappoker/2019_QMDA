@@ -90,10 +90,10 @@ figure(4);
 for r = rows
     i = find(rows==r);
     axx(i)=subplot('Position',[0.1 0.1+0.3*(3-i) 0.8 0.3]);
-    plot(x, Zp(i,:),"r-" ,  ...
-         x,Z(i,:), "k-",...
+    plot(x, Zp(r,:),"r-" ,  ...
+         x,Z(r,:), "k-",...
          'LineWidth',2);
-    legend(sprintf('%g row of Z',r),sprintf('%g row of Z_p',r))
+    legend(sprintf('row %g of Z_p',r),sprintf('row %g of Z',r))
 end
 
 set(axx,'LineWidth',1,'FontSize',14,'YTickLabel','');
